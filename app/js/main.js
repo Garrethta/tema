@@ -10,12 +10,21 @@ $(function () {
         $($(this).attr('href')).addClass('tab--active');
     });
 
-    $( '.custom' ).styler()
+    $('.custom').styler()
 
     $('.courses__tab-link').magnificPopup()
 
     $('.courses__popup-slider-items').slick({
-        
+        arrows: true,
+        prevArrow: '<div class="courses__arrow-prev"></div>',
+        nextArrow: '<div class="courses__arrow-next"></div>',
+        dots: true,
+        dotsClass: "courses__dots"
     })
-
+    $('.courses__tab-link').on('click', function (e) {
+        $('.courses__popup-slider-items').slick('setPosition')
+    })
+    $('.courses__popup-back').on( "click", function() {
+        $.magnificPopup.close();
+      });
 });

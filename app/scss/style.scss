@@ -181,19 +181,167 @@ button:focus {
     }
 }
 .courses {
-    &__popup-inner{
+    &__popup {
+        margin: 30px;
+    }
+    &__popup-inner {
         background-color: #fff;
         border-radius: 10px;
+        padding: 76px 0 60px 0;
     }
-    &__popup-slider{
+    &__popup-slider {
         text-align: center;
-        width: 100%;
+        width: 689px;
+        margin-bottom: 25px;
     }
-    &__courses__popup-slider-items{
+    &__popup-slider-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    &__courses__popup-slider-items {
         text-align: center;
-    }
-    &__popup-slider-item{
+        position: relative;
         width: 689px !important;
+    }
+    &__popup-slider-item {
+        width: 689px !important;
+    }
+    &__arrow {
+        &-prev {
+            position: absolute;
+            top: 44%;
+            left: 26px;
+            width: 59px;
+            height: 59px;
+            background-color: #fff;
+            border-radius: 50%;
+            z-index: 5;
+            transform: translateY(-50%);
+            cursor: pointer;
+            &::before {
+                content: "";
+                background-image: url(../images/courses-arrow-icon.svg);
+                background-repeat: no-repeat;
+                width: 16px;
+                height: 28px;
+                position: absolute;
+                left: 20px;
+                top: 15px;
+            }
+        }
+        &-next {
+            position: absolute;
+            top: 44%;
+            right: 26px;
+            width: 59px;
+            height: 59px;
+            background-color: #fff;
+            border-radius: 50%;
+            z-index: 5;
+            transform: translateY(-50%);
+            cursor: pointer;
+            &::before {
+                content: "";
+                background-image: url(../images/courses-arrow-icon.svg);
+                background-repeat: no-repeat;
+                width: 16px;
+                height: 28px;
+                position: absolute;
+                left: 24px;
+                top: 15px;
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &__dots {
+        display: flex;
+        margin-left: -41px;
+        margin-bottom: 70px;
+        li {
+            font-size: 0;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            & + li {
+                margin-left: 11px;
+            }
+            button {
+                display: none;
+            }
+            &.slick-active {
+                box-shadow: 0px 0px 0px 3px #ed3f56;
+            }
+            &:nth-child(1) {
+                background-image: url(../images/courses-dots1.png);
+            }
+            &:nth-child(2) {
+                background-image: url(../images/courses-dots2.png);
+            }
+            &:nth-child(3) {
+                background-image: url(../images/courses-dots3.png);
+            }
+            &:nth-child(4) {
+                background-image: url(../images/courses-dots4.png);
+            }
+            &:nth-child(5) {
+                background-image: url(../images/courses-dots5.png);
+            }
+            &:nth-child(6) {
+                background-image: url(../images/courses-dots6.png);
+            }
+        }
+    }
+    &__popup-info {
+        display: flex;
+        justify-content: center;
+    }
+    &__popup-text {
+        width: 775px;
+    }
+    &__popup-title {
+        font-family: "GraphikLCG-Bold";
+        font-size: 28px;
+        line-height: 33px;
+        color: #2d2d2d;
+        margin-bottom: 25px;
+    }
+    &__popup-features {
+        font-size: 18px;
+        line-height: 27px;
+        color: #666666;
+        margin-bottom: 31px;
+    }
+    &__popup-link {
+        font-family: "GraphikLCG-Bold";
+        padding: 18px 35px;
+        background-color: #ed3f56;
+        color: #fff;
+        border-radius: 44px;
+        font-size: 14px;
+        line-height: 23px;
+        letter-spacing: 0.075em;
+        text-transform: uppercase;
+        margin-bottom: 33px;
+        transition: all 0.3s;
+        &:hover {
+            filter: drop-shadow(0px 0px 20px rgba(226, 21, 48, 0.5));
+        }
+    }
+    &__popup-list {
+        margin-bottom: 50px;
+    }
+    &__popup-chapter {
+        margin: 40px 0;
+        li:first-child {
+            font-family: "GraphikLCG-Bold";
+        }
+    }
+    &__popup-back {
+        display: block;
+        background-color: transparent;
+        text-decoration-line: underline;
+        padding-top: 20px;
+        cursor: pointer;
     }
     &__top {
         text-align: center;
