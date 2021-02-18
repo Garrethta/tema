@@ -14,6 +14,8 @@ $(function () {
 
     $('.courses__tab-link').magnificPopup()
 
+
+
     $('.courses__popup-slider-items').slick({
         arrows: true,
         prevArrow: '<div class="courses__arrow-prev"></div>',
@@ -23,8 +25,12 @@ $(function () {
     })
     $('.courses__tab-link').on('click', function (e) {
         $('.courses__popup-slider-items').slick('setPosition')
+        $('body').addClass('popup-open')
     })
-    $('.courses__popup-back').on( "click", function() {
+    // $('.mfp-bg').on('click', function (e) {
+    //     $('body').removeClass('popup-open')
+    // })
+    $('.courses__popup-back').on("click", function () {
         $.magnificPopup.close();
-      });
+    });
 });

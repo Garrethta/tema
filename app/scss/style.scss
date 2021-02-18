@@ -183,6 +183,9 @@ button:focus {
 .courses {
     &__popup {
         margin: 30px;
+        .mfp-close {
+            display: none;
+        }
     }
     &__popup-inner {
         background-color: #fff;
@@ -193,6 +196,8 @@ button:focus {
         text-align: center;
         width: 689px;
         margin-bottom: 25px;
+        position: relative;
+        margin-bottom: 100px;
     }
     &__popup-slider-wrapper {
         display: flex;
@@ -205,6 +210,9 @@ button:focus {
     }
     &__popup-slider-item {
         width: 689px !important;
+        img {
+            width: 100%;
+        }
     }
     &__arrow {
         &-prev {
@@ -255,8 +263,11 @@ button:focus {
     }
     &__dots {
         display: flex;
-        margin-left: -41px;
-        margin-bottom: 70px;
+        // margin-left: -41px;
+        // margin-bottom: 70px;
+        position: absolute;
+        left: 30px;
+        bottom: -65px;
         li {
             font-size: 0;
             width: 60px;
@@ -342,6 +353,9 @@ button:focus {
         text-decoration-line: underline;
         padding-top: 20px;
         cursor: pointer;
+        &:focus{
+            padding-top: 20px;
+        }
     }
     &__top {
         text-align: center;
@@ -376,6 +390,17 @@ button:focus {
             border: 1px solid #ed3f56;
         }
     }
+    &__inner {
+        //     display: grid;
+        //     grid-template-columns: repeat(3, 378px);
+        //     grid-template-rows: repeat(53, 1fr);
+        column-count: 3;
+        column-gap: 18px;
+    }
+    // &__tab-item {
+    //     // &:nth-child(1) {
+
+    // }
     &__tab-inner {
         display: flex;
         justify-content: space-between;
@@ -392,6 +417,7 @@ button:focus {
         margin-top: 10px;
     }
     &__tab-item {
+        display: inline-block;
         width: 378px;
         padding: 25px 30px 44px;
         background-color: #fff;
@@ -524,6 +550,7 @@ button:focus {
             }
         }
         &.title3 {
+            margin-bottom: 60px;
             &::after {
                 content: "";
                 background-image: url(../images/purpose-style-bg3.svg);
@@ -576,6 +603,9 @@ button:focus {
     &__text {
         max-width: 610px;
         margin-bottom: 40px;
+    }
+    &__about-mobile {
+        display: none;
     }
     &__about-title {
         font-family: "GraphikLCG-Bold";
@@ -666,6 +696,9 @@ button:focus {
         margin-bottom: 31px;
         span {
             color: #ed3f56;
+        }
+        &.mobile {
+            display: none;
         }
     }
     &__info {
